@@ -1,0 +1,30 @@
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+
+public class Controller2 {
+
+    @FXML
+    private TextField fieldx;
+    @FXML
+    private TextField fieldy;
+    @FXML
+    private Label label;
+
+    public void onClickMethod(ActionEvent actionEvent) {
+        double x= Double.parseDouble(fieldx.getText());
+        double y= Double.parseDouble(fieldy.getText());
+        double r= Math.sqrt(Math.pow(x,2) + Math.pow(y,2));
+        double S= (x*y) / 2;
+        if ( r <= 6 && x <= 3 && !(x < 0 && y < 0) &&
+                ((S <= 9) && x >= -3 && y <= 6)) {
+           label.setText("Точка (" +x+ " ; " +y+ ") лежит в этой области");
+           label.setTextFill(Color.BLUE);
+        } else {
+            label.setText("Точка (" +x+ " ; " +y+ ") не лежит в этой области.");
+            label.setTextFill(Color.RED);
+        }
+    }
+}
