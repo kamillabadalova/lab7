@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lab7.Controller3"
+            prefHeight="230.0" prefWidth="650.0">
+        <ComboBox fx:id="who" promptText="кто/что" layoutX="18.0" layoutY="15.0" prefHeight="29.0" prefWidth="109.0" >
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Кузнечик"/>
+                    <String fx:value="Вася"/>
+                    <String fx:value="Крокодил"/>
+                    <String fx:value="Орёл"/>
+                    <String fx:value="Трактор"/>
+                    <String fx:value="Боинг 747"/>
+                    <String fx:value="Слоник"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="doing" promptText="действие" layoutX="136.0" layoutY="15.0" prefHeight="29.0" prefWidth="109.0" >
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="ушёл"/>
+                    <String fx:value="полетел"/>
+                    <String fx:value="побежал"/>
+                    <String fx:value="залез"/>
+                    <String fx:value="уполз"/>
+                    <String fx:value="упрыгал"/>
+                    <String fx:value="умчался"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox fx:id="where" promptText="куда" layoutX="255.0" layoutY="15.0" prefHeight="29.0" prefWidth="119.0" >
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="в кусты"/>
+                    <String fx:value="на дискотеку"/>
+                    <String fx:value="домой"/>
+                    <String fx:value="за чаем"/>
+                    <String fx:value="на Чукотку"/>
+                    <String fx:value="по грибы"/>
+                    <String fx:value="на охоту"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <TextArea fx:id="area" xmlns:fx="http://javafx.com/fxml" layoutX="17.0" layoutY="61.0"  prefHeight="147.0" prefWidth="453.0"  wrapText="true" />
+        <Button text="Добавить фразу" onAction="#OnClickMethod" layoutX="479.0" layoutY="119.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0" />
+        <Button fx:id="btn" onAction="#ClickToClose" text="Закрыть" layoutX="479.0" layoutY="169.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0" />
+</AnchorPane>
