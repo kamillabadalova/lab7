@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.ImageView?>
@@ -18,9 +17,10 @@
     <Label text="Y = " layoutX="345.0" layoutY="145.0" prefHeight="20.0" prefWidth="40.0"/>
     <Label text="Координаты точки на плоскости" layoutX="325.0" layoutY="57.0" prefHeight="16.0" prefWidth="241.0" />
     <Label fx:id="label"  layoutX="200.0" layoutY="318.0" prefHeight="20.0" prefWidth="350.0" />
-    <ImageView   fitHeight="10.0" fitWidth="36.0" layoutX="21.0" layoutY="64.0" >
+    <ImageView   fitHeight="220.0" fitWidth="265.0" layoutX="21.0" layoutY="64.0" >
         <image>
             <Image url="@рисунок.jpg"/>
         </image>
     </ImageView>
 </AnchorPane>
+
