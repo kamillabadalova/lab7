@@ -1,0 +1,59 @@
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+
+public class Controller1 {
+
+    @FXML
+    private Label label4;
+    @FXML
+    private Label label5;
+
+    @FXML
+    private TextField aa;
+    @FXML
+    private TextField bb;
+    @FXML
+    private TextField cc;
+
+    public void onClickMethod(ActionEvent actionEvent) {
+        double a = Double.parseDouble(aa.getText());
+        double b = Double.parseDouble(bb.getText());
+        double c = Double.parseDouble(cc.getText());
+        double x1;
+        double x2;
+        double x;
+        double D = b * b - 4 * a * c;
+        String label;
+        String label1;
+        if (D > 0) {
+            x1 = (-b + Math.sqrt(D)) / (2 * a);
+            x2 = (-b - Math.sqrt(D)) / (2 * a);
+            label= String.format("Корни:  х1 = %.3f   и   x2 = %.3f", x1, x2);
+            label1= String.format("При  D = -%.3f", D);
+            label4.setText(label);
+            label5.setText(label1);
+        }
+        if (D < 0) {
+            D = -D;
+            b = -b / (2 * a);
+            x = Math.sqrt(D) / (2 * a);
+            label= String.format("Корни:  х1 = %.3f + %.3fi   и   x2 = %.3f - %.3fi", b, x, b, x);
+            label1= String.format("При  D = -%.3f", D);
+            label4.setText(label);
+            label5.setText(label1);
+        }
+        if (D == 0) {
+            x = -b / (2 * a);
+            label= String.format("Корень:  х = %.3f", x, D);
+            label4.setText(label);
+            label5.setText("При  D = 0");
+        }
+        if (a == 0) {
+            label4.setText("Решается не квадратное, а линейное уравнение!");
+        }
+    }
+}
