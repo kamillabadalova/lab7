@@ -48,7 +48,7 @@
                 </FXCollections>
             </items>
         </ComboBox>
-        <TextArea fx:id="area" xmlns:fx="http://javafx.com/fxml" layoutX="17.0" layoutY="61.0"  prefHeight="147.0" prefWidth="453.0"  wrapText="true" />
+        <TextArea fx:id="textarea" xmlns:fx="http://javafx.com/fxml" layoutX="17.0" layoutY="61.0"  prefHeight="147.0" prefWidth="453.0"  wrapText="true" />
         <Button text="Добавить фразу" onAction="#OnClickMethod" layoutX="479.0" layoutY="119.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0" />
-        <Button fx:id="btn" onAction="#ClickToClose" text="Закрыть" layoutX="479.0" layoutY="169.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0" />
+        <Button fx:id="closeButton" onAction="#ClickToClose" text="Закрыть" layoutX="479.0" layoutY="169.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0" />
 </AnchorPane>
