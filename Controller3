@@ -1,3 +1,4 @@
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -5,7 +6,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-public class Controller3 {
+public class Controller1 {
     @FXML
     private ComboBox who;
     @FXML
@@ -13,20 +14,22 @@ public class Controller3 {
     @FXML
     private ComboBox where;
     @FXML
-    private TextArea area;
+    private TextArea textarea;
     @FXML
-    private Button btn;
+    private Button closeButton;
 
     public void OnClickMethod(ActionEvent actionEvent) {
-        String who1 = String.valueOf(who.getValue());
-        String doing1 = String.valueOf(doing.getValue());
-        String where1 = String.valueOf(where.getValue());
-        String proposal = String.format("%s %s %s",who1,doing1,where1);
-        area.appendText(proposal+"\n");
+        String who1= String.valueOf(who.getValue());
+        String doing1= String.valueOf(doing.getValue());
+        String where1= String.valueOf(where.getValue());
+        String sentence= String.format("%s %s %s",who1,doing1,where1);
+        textarea.appendText(sentence + "\n");
     }
     public void ClickToClose(ActionEvent actionEvent) {
-        Stage primarystage = (Stage)btn.getScene().getWindow();
-        primarystage.close();
+        // get a handle to the stage
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        // do what you have to do
+        stage.close();
     }
 
 
