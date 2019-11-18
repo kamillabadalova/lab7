@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.TextField?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="lab7.Controller1"
+            prefHeight="300.0" prefWidth="370.0">
+<Button  onAction="#onClickMethod"  text="Вычислить" layoutX="151" layoutY="231" />
+    <Label fx:id="label" text="Введите коэффициенты"  layoutX="120" layoutY="44"/>
+<Label fx:id="label1" text=" X^2  + "  layoutX="82" layoutY="104"/>
+    <Label fx:id="label2" text="X  + " layoutX="207" layoutY="104" />
+    <Label fx:id="label3" text=" =  0 " layoutX="329" layoutY="104"/>
+    <TextField fx:id="aa" layoutY="98" layoutX="8" prefWidth="69" prefHeight="25" />
+    <TextField fx:id="bb" layoutY="98" layoutX="129" prefWidth="69" prefHeight="25"  />
+    <TextField fx:id="cc" layoutY="98" layoutX="243" prefWidth="69" prefHeight="25" />
+    <Label fx:id="label4" layoutX="7" layoutY="160"/>
+    <Label fx:id="label5" layoutX="7" layoutY="187"/>
+</AnchorPane>
